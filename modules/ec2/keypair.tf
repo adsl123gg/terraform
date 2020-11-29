@@ -1,0 +1,4 @@
+resource "aws_key_pair" "aws_eu_key" {
+  key_name   = "aws_eu_key"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC2s2no5igwBxrcNddwOZFyKUUKuggTKF9qDt2wdpqOEzCw+EmdnBb/T52me7IbrzokXLAS+vssH+sbdd5yU9Domc5wT+kvDpD8C+fb8ouuVi5157gEPGDB/xXpsYT8i7E/sspAknLiViK/zRmxH71w0bthLnZrn8XOGhRXUAaZ8FGHbyN8J8EditUXSYdTtlS4mepcSseou06/Ny5BkhQiVFZVgBPtGxNFv8KW2EoO61XjGC5FnY3McEJT2fdM6gRloby1gOXXP2MTJrNtRzvA2Q0SCPSSSnGjusFrYxxTh2WYmlogQPabKJ1IDoZMjaWXNTMMtk22YJBm44cmwpsH aws_ubuntu_keypair"
+}

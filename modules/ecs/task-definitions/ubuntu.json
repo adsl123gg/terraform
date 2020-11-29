@@ -1,0 +1,24 @@
+[
+  {
+    "cpu": 256,
+    "essential": true,
+    "image": "700403127478.dkr.ecr.eu-central-1.amazonaws.com/ubuntu_ss:latest",
+    "memory": 512,
+    "name": "ubuntu-ec2",
+    "essential": true,
+    "entryPoint": ["sh","-c"],
+    "command": ["/bin/sh -c service ssh start;while sleep 2; do echo thinking; done"],
+    "portMappings": [
+                {
+                    "hostPort": 8933,
+                    "containerPort": 8933,
+                    "protocol": "tcp"
+                },
+		{
+                    "hostPort": 8377,
+                    "containerPort": 8377,
+                    "protocol": "tcp"
+                }
+            ]
+  }
+]

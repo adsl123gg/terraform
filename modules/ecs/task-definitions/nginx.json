@@ -1,0 +1,21 @@
+[
+  {
+    "cpu": 128,
+    "environment": [{
+      "name": "SECRET",
+      "value": "KEY"
+    }],
+    "essential": true,
+    "image": "nginx:latest",
+    "memory": 256,
+    "memoryReservation": 128,
+    "name": "nginx-fargate",
+    "portMappings": [
+                {
+                    "hostPort": 80,
+                    "containerPort": 80,
+                    "protocol": "tcp"
+                }
+            ]
+  }
+]

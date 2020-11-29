@@ -1,0 +1,21 @@
+Resources:
+  Alarm4CpuUsage:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: 'cms-Alarm4Cpu' 
+      ComparisonOperator: GreaterThanThreshold
+      EvaluationPeriods: 1
+      MetricName: CPUUtilization 
+      Dimensions:
+      - Name: InstanceId
+        Value: "${data.aws_instance.example.id}"
+      Namespace: AWS/EC2 
+      Period: 300
+      Statistic: Maximum
+      Threshold: 90
+Outputs:
+  Alarm4CpuInfo:
+    Value: 'eason2' 
+    Description: ''
+    Export:
+      Name: 'hqc'
