@@ -1,0 +1,1 @@
+terraform init -backend-config "key=terraform/terraform.tfstate" -backend-config "bucket=bucket-tf" -backend-config "region=eu-central-1"

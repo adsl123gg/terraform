@@ -6,9 +6,9 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = "bucket-tf"
-    key    = "terraform/terraform.tfstate"
-    region = "eu-central-1"
+    bucket = bucket
+    key    = key 
+    region = region 
   }
 }
 
@@ -17,6 +17,7 @@ provider "aws" {
   region  = var.aws_region
 }
 
+/*
 module "ecs_container" {
   source        = "./modules/ecs/"
   instance_type = var.instance_type
@@ -35,3 +36,4 @@ module "ec2" {
 module "alarm" {
   source = "./modules/alarm/"
 }
+*/
