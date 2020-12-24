@@ -1,8 +1,5 @@
-aws_region    = "eu-central-1"
-aws_profile   = "default"
 bucket        = "bucket-tf"
 tfkey         = "terraform/"
-tfstate       = "terraform/terraform.tfstate"
 instance_type = "t2.micro"
 image_id      = "ami-01d0a207e715143bf"
 ec2_subnet_id = "subnet-1e0edf62"

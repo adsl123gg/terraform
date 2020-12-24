@@ -1,8 +1,9 @@
+locals {
+  bucket_name = "${var.bucket}-${var.env}"
+}
+
 resource "aws_s3_bucket" "bucket" {
-  bucket = var.bucket
-  versioning {
-    enabled = true
-  }
+  bucket = local.bucket_name 
 
   tags = {
     Name        = "My bucket"
@@ -10,16 +11,9 @@ resource "aws_s3_bucket" "bucket" {
   }
 }
 
-resource "aws_s3_bucket_object" "object" {
-  bucket     = var.bucket
-  key        = var.tfkey
-  depends_on = [aws_s3_bucket.bucket]
-}
-
 resource "aws_s3_bucket_object" "resources" {
-  bucket     = var.bucket
+  bucket     = local.bucket_name
   key        = "resources/"
-  acl        = "public-read"
   depends_on = [aws_s3_bucket.bucket]
 }
 

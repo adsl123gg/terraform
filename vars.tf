@@ -1,3 +1,7 @@
+variable "env" {
+  type = string
+}
+
 variable "aws_region" {
   type = string
 }
@@ -13,10 +17,6 @@ variable "bucket" {
 variable "tfkey" {
   type    = string
   default = "terraform/"
-}
-variable "tfstate" {
-  type    = string
-  default = "terraform/terraform.tfstate"
 }
 
 variable "instance_type" {
