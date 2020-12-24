@@ -5,15 +5,18 @@ terraform {
       version = "~> 3.17"
     }
   }
-  backend "s3" {
-    bucket = bucket
-    key    = key 
-    region = region 
+  backend "remote" {
+    hostname      = "app.terraform.io"
+    organization  = "vmware-qhao"
+
+    workspaces {
+      name = "terraform"
+    }
   }
 }
 
 provider "aws" {
-  profile = var.aws_profile
+  //profile = var.aws_profile
   region  = var.aws_region
 }
 

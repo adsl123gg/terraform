@@ -1,8 +1,0 @@
-bucket        = "bucket-tf"
-tfkey         = "terraform/"
-instance_type = "t2.micro"
-image_id      = "ami-01d0a207e715143bf"
-ec2_subnet_id = "subnet-1e0edf62"
-ecs_subnet_id = "subnet-04108d94615499fff"
-ec2_sg        = "sg-8c2c47f0"
-ecs_sg        = "sg-084318565d1a6c888"
