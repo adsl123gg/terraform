@@ -10,7 +10,7 @@ terraform {
     organization  = "vmware-qhao"
 
     workspaces {
-      name = "terraform"
+      name = "terraform-prod-cli"
     }
   }
 }
